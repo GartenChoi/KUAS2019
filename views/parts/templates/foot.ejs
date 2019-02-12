@@ -1,0 +1,21 @@
+<!--[if lte IE 8]><script src="/js/common/html5shiv.js"></script><script src="/js/common/css3-mediaqueries.js"></script><![endif]-->
+
+<!-- JavaScript Libraries -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/jquery/jquery-migrate.min.js"></script>
+<script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    let isUser=<%=user!==undefined%>;
+</script>
+<!-- Template Main Javascript File -->
+<script src="/js/common/common.js"></script>
+<%if(locals.js){locals.js.forEach(function(item){%><script type="text/javascript" src="<%-item%>"></script><%})}%>
+
+<!--Google AD-->
+<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+<!--<script>-->
+    <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+        <!--google_ad_client: "ca-pub-6222116332853564",-->
+        <!--enable_page_level_ads: true-->
+    <!--});-->
+<!--</script>-->

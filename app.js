@@ -7,6 +7,17 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+const mongoose=require('mongoose'),db=mongoose.connection;
+
+mongoose.connect('mongodb://KUAS:KUAS2019' +
+    '@cluster0-shard-00-00-pp6sh.mongodb.net:27017,' +
+    'cluster0-shard-00-01-pp6sh.mongodb.net:27017,' +
+    'cluster0-shard-00-02-pp6sh.mongodb.net:27017',
+    {
+        useNewUrlParser: true,
+        promiseLibrary: global.Promise
+    });
+
 var app = express();
 
 // view engine setup
