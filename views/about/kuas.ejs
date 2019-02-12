@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    const headParams={
+        title:'KUAS - 고려대학교 합성생물학회',
+        url:'/',
+        description:'고려대학교 합성생물학회',
+        keywords:['KUAS','합성생물학','igem','생물','생명','생물학','고려대학교','고려대'],
+        images:['/img/logo.png'],
+        css:['/css/index/index.css'],
+        schema:{
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.kuaskorea.org",
+            "name":"Major Map",
+            "logo": "https://www.kuaskorea.org/img/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email":"kuaskorea@gmail.com",
+                "contactType": "Customer service"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.kuaskorea.org/map/searchMap?search={searchTerms}",
+                "query-input": "required name=searchTerms"
+            }
+        }
+    }
+    let footParams={
+        js:[]
+    }%>
+    <%-include('../parts/head.ejs',headParams);%>
+</head>
+<body>
+<%include ../parts/header.ejs%>
+<main style="min-height:100%;padding-top:50px;">
+    <div>
+        <div>KUAS</div>
+        <div>Korea University Association of Synthetic biology</div>
+        <div>유전공학의 대중화, 유전자 모듈화를 통한 표준적인 플랫폼의 개발</div>
+    </div>
+    <div>
+        <div>KUAS</div>
+        <div>
+            고려대학교 합성생물학회 (이하 KUAS)는 고려대학교 내 다양한 전공의 대학생들이 자발적으로 모여서 구성된 학회로서, ‘합성생물학’ 에 대한 연구를 함과 동시에 주제와 관련된 사회공헌활동을 통해 과학과 대중의 소통을 선도하고 있으며, 국제합성생물학회 (International Genetically Engineered Machine, 이하 iGEM)에 한국 유일 학부생 팀으로서 매년 참여하여 우수한 성과를 내고 있습니다.  학부생으로 구성된 저희 학회원들은 생명공학부 최인걸 교수님의 계산 및 합성생물학 연구실 밑에서 가르침을 받으며 직접적인 합성생물학 연구 및 대내외적으로 관련된 봉사와 대외활동들을 진행함으로써 실험실 안은 물론, 밖에서도 대중과 사회에 긍정적인 영향을 주고자 노력하고 있습니다.<br>
+            합성생물학은 국내에서 아직은 많이 개척되지 않은 분야입니다. 새로운 생명을 창조하는 윤리성이 개입된 학문임에도 국내의 사회적 관심이 부족하여 과학윤리가 합성생물학의 발전을 따라가지 못하고 있습니다. 이에 본 학회는 단지 대회에 참가하는 것을 넘어서서 합성생물학에 대한 대중의 관심을 도모하고 이에 얽힌 윤리적 문제를 사회적으로 알리는 역할도 겸할 것입니다.
+        </div>
+    </div>
+    <div>
+        <div>합성생물학</div>
+        <div>
+            합성생물학은 생명과학에 공학적 관점을 도입하여 기존에 생명체들이 가지고 있는 기능들을 개량하거나, 자연적으로는 존재하지 않는 기능을 새롭게 설계하고 제작하는 두 가지 목적을 포괄합니다. 이를 위해서 기존에 존재하는 생물의 작용기 및 구성성분들을 조작하거나 새로이 조합하는 방법 등을 사용합니다.<br>
+            여러 공학 기술에서 적용되는 부품화, 표준화, 모듈화 개념이 도입된 합성생물학은 궁극적으로 조립 컴퓨터처럼, '비전문가도 만들 수 있는 생물체' (DIY-BIO)를 지향합니다. 현재 세계 곳곳에서 여러가지 기능을 수행할 수 있는 유전자들을 Biobrick화 하는 작업을 수행하고 있으며 (규격화, 부품화), 개별적인 팀, 혹은 개인들의 노력을 통하여 완성된 각각의 biobrick들은 이 거대한 프로젝트가 완성되는 때에 이르러서 누구나, 마치 레고 블록을 연결하듯 원하는 기능을 가진 생명체를 만들어 낼 수 있는 시대의 도래를 이끌어 나갈 것입니다.
+        </div>
+    </div>
+    <div>
+        KUAS는 크게 세 팀으로 구성되어 있습니다.<br>
+        Wet-lab은 실험실에서 실제로 연구를 진행하고, Dry-lab은 연구와 관련된 모델링과 소프트웨어, 그리고 웹 페이지 제작을 담당하며, Human practice 팀은 합성생물학 지식을 바탕으로 사회에 기여할 수 있는 프로젝트를 기획합니다.<br>
+        저희 팀은 2009년도에 처음 '미생물을 이용한 중금속 탐지'라는 주제 아래 이를 검출할 수 있는 미생물을 만들어서 대회에 참가한 이래로 ‘벼 잎마름병 억제프로젝트', '지구온난화 해결을 위한 대기 중 이산화탄소 고정 프로젝트＇ 등의 주제로 지속적으로 대회에 참가하여 다수 수상하는 등 그 연구 성과를 인정받았습니다.  저희의 연구 성과는 또한 ‘과학동아’등에도 기사화되는 등 국내에서도 성과를 인정받고 있습니다.<br>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;">
+        <div style="flex:1 0 50%;min-width:360px;">
+            <%[{title:'10 YEARS',text:'KUAS는 지난 10년간 대한한국 대표팀으로서 iGEM에 매년 참가해왔습니다. 대한민국 최초의, 최고의, 최대의 iGEM 참가 팀입니다.'},
+                    {title:'9 TIMES',text:'KUAS는 지난 9년간 참가한 모든 iGEM 대회에서 입상을 놓친 적이 없습니다. 2015, 2016년의 연속 금메달 수상은 KUAS의 실력을 증명합니다.'},
+                    {title:'17 TIMES',text:'고려대학교 교수학습개발원 주최 연구 프로그램(CCP) 및 캠퍼스 특허전략 유니버시아드 등  수많은 교내외 프로그램 및 대회에 참가하여 합격하였습니다. KUAS는 지치지 않는 열정을 가집니다.'}].forEach(function(item){%>
+            <div>
+                <div><%-item.title%></div>
+                <div><%-item.text%></div>
+            </div>
+            <%})%>
+        </div>
+        <div style="flex:1 0 50%;">
+            <%[{year:2009,activity:['고려대학교 합성생물학회 창설','iGEM(International Genetically Engineered Machine competition)2009 참가','iGEM 2009 Asia workshop 참가(University of Tokyo, Japan)','캠퍼스 특허전략 유니버시아드 우수상']},
+                    {year:2010,activity:['iGEM Competiton 2010 Championship 은상 수상','iGEM 2010 Asia workshop 참가(Tzu Chi University, Taiwan)','고려대학교 교수학습개발원 주최 CCP(Creative Challenger Program) 참가']},
+                    {year:2011,activity:['iGEM Competition 2011 Asia Jamboree 동상 수상','고려대학교 교수학습개발원 주최 CCP(Creative Challenger Program) 참가','한국생물공학회 BT news 2011년 가을호 – 최신연구동향']}
+                    ].forEach(function(item){%>
+            <div>
+                <div><%-item.year%></div>
+                <%item.activity.forEach(function(i){%>
+                <div><%-i%></div>
+                <%})%>
+            </div>
+            <%})%>
+        </div>
+    </div>
+    <div>
+        <div>iGEM</div>
+        <div>
+            IGEM (International Genetically Engineered Machine, 국제합성생물학대회)는 매년 Boston에서 개최되는,  세계 각 국의 300 여 개의 대학교 학부생들과 대학원생들이 참여하는 국제 대회입니다. 대회 참가자들은 직접 실험을 설계하고 진행하며, 기존에 없는 창의적인 새로운 응용방법과 해결법을 제시하게 됩니다. 대회에서 발표된 연구결과들은 이후 실제 연구사례에 적용되어 여러 사회적 문제를 해결하는 방법으로 사회에 공헌 됩니다. 합성생물학의 올림픽이라고 불리는 국제적인 대회인 iGEM은 이처럼 사회에 이바지할 수 있는 연구를 통하여 학계 및 사회 전반에 긍정적인 결과가 나타나게 되는 선순환을 유도합니다. 이와 동시에 IGEM은 전 세계 약 300개 학교에서 참여하기에 수많은 생명공학도들 간 교류의 장을 연다는 의미도 가지고 있습니다.  iGEM competition에서는 각 팀들이 기존에 등록되었거나 새로이 개발한 Biobrick을 이용할 수 있는 새로운 응용방법을 제시하거나 새로운 기능을 하는 부품개발을 위해 노력한 결과를 발표하는 자리입니다. 여러 나라에서 참가한 팀들은 약 1년간의 연구 기간 동안 각자의 주제에 대한 연구를 진행하며, 이 과정에서 다른 팀들과 협업하거나 신규 팀에 대한 교육활동을 진행하는 등의 선의의 경쟁 과정을 거치게 됩니다. 여기서 biobrick이란 규격화와 부품화를 통하여 만들어진 하나의 유전자 블록으로서, 해당 유전자의 발현을 위해 필요한 모든 부속들을 더하여 완성된 부품입니다. 지금까지는 하나의 유전자를 발현시키기 위해서 연구자 개개인들이 각자의 필요에 의해 일일히 제작해야만 했으나, 부품화를 통해 완성된 이러한 biobrick들은 오픈소스로서 모두에게 제공되어 누구나 손쉽게 자신이 원하는 형질을 발현시킬 수 있도록 도와주고 있습니다.
+        </div>
+    </div>
+</main>
+<%include ../parts/footer.ejs%>
+<%-include('../parts/foot.ejs',footParams);%>
+</body>
+</html>

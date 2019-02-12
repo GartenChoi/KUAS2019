@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    const headParams={
+        title:'KUAS - 고려대학교 합성생물학회',
+        url:'/',
+        description:'고려대학교 합성생물학회',
+        keywords:['KUAS','합성생물학','igem','생물','생명','생물학','고려대학교','고려대'],
+        images:['/img/logo.png'],
+        css:['/css/index/index.css'],
+        schema:{
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.kuaskorea.org",
+            "name":"Major Map",
+            "logo": "https://www.kuaskorea.org/img/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email":"kuaskorea@gmail.com",
+                "contactType": "Customer service"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.kuaskorea.org/map/searchMap?search={searchTerms}",
+                "query-input": "required name=searchTerms"
+            }
+        }
+    }
+    let footParams={
+        js:[]
+    }%>
+    <%-include('../parts/head.ejs',headParams);%>
+</head>
+<body>
+<%include ../parts/header.ejs%>
+<main style="min-height:100%;padding-top:50px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center">
+    <%[{name:'이태훈',part:'leader'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'},
+            {name:'최영우',part:'wet lab'}].forEach(function(item){%>
+    <div style="flex:0 0 300px;height:300px;padding:10px;text-align: center">
+        <div><%-item.name%></div>
+        <div><%-item.part%></div>
+    </div>
+    <%})%>
+</main>
+<%include ../parts/footer.ejs%>
+<%-include('../parts/foot.ejs',footParams);%>
+</body>
+</html>

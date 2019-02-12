@@ -20,49 +20,33 @@
 <link rel="canonical" lang="ko" content="<%-fullURL(locals.url)%>">
 <title><%-locals.title%></title>
 
-<link rel="search" type="application/opensearchdescription+xml" href="/openSearch.xml" title="MajorMap">
+<!--<link rel="search" type="application/opensearchdescription+xml" href="/openSearch.xml" title="KUAS">-->
 
 <!--모바일-->
 <meta name="apple-mobile-web-app-title" content="<%-locals.title%>">
-<link rel="shortcut icon" type="image/x-icon" href="/img/majorMap/favicon256.png"/>
-<link rel="icon" type="image/x-icon" href="/img/majorMap/favicon256.png"/>
-<%[76,120,152,167,180].forEach(function(item){%>
-<link rel="apple-touch-icon" sizes="<%-item%>x<%-item%>" href="/img/majorMap/favicon<%-item%>.png">
-<%})%>
-<link rel="apple-touch-icon" href="/img/majorMap/favicon256.png">
+<link rel="shortcut icon" type="image/x-icon" href="/img/logo.png"/>
+<link rel="icon" type="image/x-icon" href="/img/logo.png"/>
+<link rel="apple-touch-icon" href="/img/logo.png">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <!--모바일 로딩이미지. 320*460, 640*920, 768*1004, 748*1024, 1536*2008, 1496*2048 이미지 있어야함-->
-<link rel="apple-touch-startup-image" href="/img/majorMap/logo-blue-icon.png"/>
+<link rel="apple-touch-startup-image" href="/img/logo.png"/>
 <!--모바일 상태바 색상-->
-<meta name="apple-mobile-web-app-status-bar-style" content="#294084"/>
-<meta name="theme-color" content="#294084"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="<%-kuas.mainColor%>"/>
+<meta name="theme-color" content="<%-kuas.mainColor%>"/>
 
-<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" href="/css/common.css">
 <%locals.css.forEach(function(item){%>
 <link rel="stylesheet" href="<%-item%>">
 <%})%>
 
-<link rel="manifest" href="/manifest.json"/>
+<!--<link rel="manifest" href="/manifest.json"/>-->
 
 <!-- META SEO -->
-<meta name="author" content="Major Map" />
-<meta name="copyright" content="copyrights (c) by (주)잡쇼퍼" />
-
-<!-- Google Search Console -->
-<meta name="google-site-verification" content="02lF27ABhrcOfpvnVj1kW-aOY7KALgRSkzgCCnMOWX0" />
-<meta name="google-site-verification" content="zSS3TCL55Sg-B3x7JEQ3bg9k6CowJtDihJlKigShbqw" />
-<meta name="google-site-verification" content="YxqAZVD4yzzji9-NNCtCGQbjep-n-Ev7XJSRAoakpeE" />
-<meta name="google-site-verification" content="_ENZwlJU1aOy_2a9b8rB2rRfgpR2fio2ZMsdA-67tpE" />
-
-<!-- Naver Web Master -->
-<meta name="naver-site-verification" content="cd5e9e816f0b1ac75fab8f75e474023da050f2db"/>
-
-<!-- Bing Search Console -->
-<meta name="msvalidate.01" content="64503FC5502D0FA2793C197853A92B98" />
+<meta name="author" content="KUAS" />
+<meta name="copyright" content="copyrights (c) by garten_choi" />
 
 <script type="application/ld+json">
 <%-JSON.stringify(locals.schema)%>

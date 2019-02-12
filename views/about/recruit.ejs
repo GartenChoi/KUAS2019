@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    const headParams={
+        title:'KUAS - 고려대학교 합성생물학회',
+        url:'/',
+        description:'고려대학교 합성생물학회',
+        keywords:['KUAS','합성생물학','igem','생물','생명','생물학','고려대학교','고려대'],
+        images:['/img/logo.png'],
+        css:['/css/index/index.css'],
+        schema:{
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.kuaskorea.org",
+            "name":"Major Map",
+            "logo": "https://www.kuaskorea.org/img/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email":"kuaskorea@gmail.com",
+                "contactType": "Customer service"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.kuaskorea.org/map/searchMap?search={searchTerms}",
+                "query-input": "required name=searchTerms"
+            }
+        }
+    }
+    let footParams={
+        js:[]
+    }%>
+    <%-include('../parts/head.ejs',headParams);%>
+</head>
+<body>
+<%include ../parts/header.ejs%>
+<main style="min-height:100%;padding-top:50px;">
+    포스터
+</main>
+<%include ../parts/footer.ejs%>
+<%-include('../parts/foot.ejs',footParams);%>
+</body>
+</html>
