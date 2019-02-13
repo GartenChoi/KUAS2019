@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="861b42bd-2f29-4bd0-bfd1-e67bc3f301dd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/members/이태훈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/members/최영우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/recruit/poster.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/about/members.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/about/members.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/about/recruit.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/about/recruit.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -75,24 +70,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recruit.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recruit.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/about/recruit.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="684">
+              <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
               <folding>
-                <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="members.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="members.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/about/members.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="698">
-              <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+            <state relative-caret-position="204">
+              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -179,8 +173,8 @@
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/views/parts/footer.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/about/recruit.ejs" />
         <option value="$PROJECT_DIR$/views/about/members.ejs" />
+        <option value="$PROJECT_DIR$/views/about/recruit.ejs" />
       </list>
     </option>
   </component>
@@ -319,12 +313,12 @@
       <option name="presentableId" value="Default" />
       <updated>1549997747609</updated>
       <workItem from="1549997749352" duration="10024000" />
-      <workItem from="1550051735622" duration="2513000" />
+      <workItem from="1550051735622" duration="2809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12537000" />
+    <option name="totallyTimeSpent" value="12833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -405,7 +399,6 @@
         <state relative-caret-position="703">
           <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -567,26 +560,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/about/recruit.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/about/members.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+        <state relative-caret-position="204">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/about/recruit.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
