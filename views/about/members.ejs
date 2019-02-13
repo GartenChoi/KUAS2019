@@ -34,21 +34,19 @@
 </head>
 <body>
 <%include ../parts/header.ejs%>
-<main style="min-height:100%;padding-top:50px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center">
-    <%[{name:'이태훈',part:'leader'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'},
-            {name:'최영우',part:'wet lab'}].forEach(function(item){%>
-    <div style="flex:0 0 300px;height:300px;padding:10px;text-align: center">
-        <div><%-item.name%></div>
-        <div><%-item.part%></div>
+<main style="min-height:100%;padding-top:50px;">
+    <%[{part:'Leader',members:['이태훈']},
+            {part:'Wet Lab',members:['한현규','박세영','손광호']},
+            {part:'Dry Lab',members:['최정원','여진기']},
+            {part:'Human Practices',members:['엄태현','최영우','박진혁']}].forEach(function(team){%>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center">
+        <%team.members.forEach(function(member){%>
+        <div style="flex:0 0 300px;padding:10px;text-align: center">
+            <img src="/img/members/<%-encodeURI(member)%>.jpg" style="height:300px;width:200px;">
+            <div><%-member%></div>
+            <div><%-team.part%></div>
+        </div>
+        <%})%>
     </div>
     <%})%>
 </main>
