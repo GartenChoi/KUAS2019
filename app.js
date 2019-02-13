@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function (req, res, next) {
     res.locals.kuas={
         url:'https://kuas2019.herokuapp.com',
-        mainColor:'#f88',
+        mainColor:'rgb(212,162,171)',
         warningColor:'#f00',
         successColor:'#298480',
         lightColor:'#fff',
