@@ -34,13 +34,13 @@
 </head>
 <body>
 <%include ./parts/header.ejs%>
-<main style="min-height:100%;padding:80px 30px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center">
+<main style="min-height:100%;padding:80px 30px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:<%-kuas.mainColor%>">
     <div style="font-weight:bold;font-size:50px;">준비중입니다.</div>
     <iframe frameborder="0" height="100%" width="100%" style="min-height:500px;margin-top:30px;margin-bottom:30px;"
             src="https://www.youtube.com/embed/NsEQOazlQK8?version=3&rel=1&fs=1&autohide=2&showsearch=0&showinfo=1&iv_load_policy=1&wmode=transparent" allowfullscreen='true'>
     </iframe>
     <img src="/img/recruit/poster.jpg" style="max-width:100%;"><br>
-    <div style="color:<%-kuas.mainColor%>;margin-top:30px;margin-bottom:30px;">링크는 3월에 업로드예정</div>
+    <div style="color:<%-kuas.darkColor%>;margin-top:30px;margin-bottom:30px;">링크는 3월에 업로드예정</div>
 </main>
 <%include ./parts/footer.ejs%>
 <%-include('./parts/foot.ejs',footParams);%>
