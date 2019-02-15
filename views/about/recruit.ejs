@@ -34,8 +34,11 @@
 </head>
 <body>
 <%include ../parts/header.ejs%>
-<main style="min-height:100%;padding:80px 30px 30px;text-align:center">
-    <img src="/img/recruit/poster.jpg" style="width:100%;max-width:700px;">
+<main style="min-height:100%;padding-left:30px;padding-right:30px;display:flex;flex-direction: column;align-items: center;justify-content:center;">
+    <div style="width:100%;max-width:768px;">
+        <div class="background-contain-center" style="background-image:url('/img/recruit/poster.jpg');padding-bottom:138%;"></div>
+    </div>
+    <div style="color:<%-kuas.darkColor%>;margin-top:30px;">동아리 지원 링크는 3월에 업로드예정</div>
 </main>
 <%include ../parts/footer.ejs%>
 <%-include('../parts/foot.ejs',footParams);%>

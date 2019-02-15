@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <%
-  const headParams={
-    title:'KUAS - 고려대학교 합성생물학회',
-    url:'/',
-    description:'고려대학교 합성생물학회',
-    keywords:['KUAS','합성생물학','igem','생물','생명','생물학','고려대학교','고려대'],
-    images:['/img/logo.png'],
-    css:[],
-    schema:{
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      "url": "https://www.kuaskorea.org",
-      "name":"Major Map",
-      "logo": "https://www.kuaskorea.org/img/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email":"kuaskorea@gmail.com",
-        "contactType": "Customer service"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.kuaskorea.org/map/searchMap?search={searchTerms}",
-        "query-input": "required name=searchTerms"
-      }
+    <%
+    const headParams={
+        title:'KUAS - 고려대학교 합성생물학회',
+        url:'/',
+        description:'고려대학교 합성생물학회',
+        keywords:['KUAS','합성생물학','igem','생물','생명','생물학','고려대학교','고려대'],
+        images:['/img/logo.png'],
+        css:[],
+        schema:{
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.kuaskorea.org",
+            "name":"Major Map",
+            "logo": "https://www.kuaskorea.org/img/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email":"kuaskorea@gmail.com",
+                "contactType": "Customer service"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.kuaskorea.org/map/searchMap?search={searchTerms}",
+                "query-input": "required name=searchTerms"
+            }
+        }
     }
-  }
-  let footParams={
-    js:[]
-  }%>
-  <%-include('./parts/head',headParams);%>
+    let footParams={
+        js:[]
+    }%>
+    <%-include('./parts/head',headParams);%>
 </head>
 <body>
 <%include ./parts/header.ejs%>
-<main style="min-height:100%;padding:80px 30px 30px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:<%-kuas.mainColor%>">
-    <div style="font-weight:bold;font-size:50px;">홈페이지 준비중입니다.</div>
-    <iframe frameborder="0" style="width:100%;max-width:768px;min-height:500px;margin-top:30px;margin-bottom:30px;"
-            src="https://www.youtube.com/embed/NsEQOazlQK8?version=3&rel=1&fs=1&autohide=2&showsearch=0&showinfo=1&iv_load_policy=1&wmode=transparent" allowfullscreen='true'>
-    </iframe>
-    <img src="/img/recruit/poster.jpg" style="width:100%;max-width:700px;">
-    <div style="color:<%-kuas.darkColor%>;margin-top:30px;margin-bottom:30px;">동아리 지원 링크는 3월에 업로드예정</div>
+<main style="min-height:100%;padding-left:30px;padding-right:30px;display:flex;flex-direction: column;align-items: center;justify-content:center;background-color:<%-kuas.mainColor%>">
+    <section style="font-weight:bold;font-size:50px;">홈페이지 준비중입니다.</section>
+    <section style="width:100%;max-width:768px;margin-top:30px;margin-bottom:30px;position:relative">
+        <div style="width:100%;padding-bottom:56%;"></div>
+        <iframe frameborder="0" style="width:100%;height:100%;position:absolute;top:0;left:0;" src="https://www.youtube.com/embed/NsEQOazlQK8?version=3&rel=1&fs=1&autohide=2&showsearch=0&showinfo=1&iv_load_policy=1&wmode=transparent" allowfullscreen='true'></iframe>
+    </section>
+    <section style="width:100%;max-width:768px;">
+        <div class="background-contain-center" style="background-image:url('/img/recruit/poster.jpg');padding-bottom:138%;"></div>
+    </section>
+    <section style="color:<%-kuas.darkColor%>;margin-top:30px;">동아리 지원 링크는 3월에 업로드예정</section>
 </main>
 <%include ./parts/footer.ejs%>
 <%-include('./parts/foot.ejs',footParams);%>
