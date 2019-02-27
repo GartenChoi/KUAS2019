@@ -1,28 +1,4 @@
-@font-face {
-  font-family: 'NanumBarunpen';
-  font-style: normal;
-  font-weight: normal;
-  src: local('/fonts/NanumBarunpen'),
-  url('/fonts/NanumBarunpenR.woff2') format('woff2'),
-  url('/fonts/NanumBarunpenR.woff') format('woff'),
-  url('/fonts/NanumBarunpenR.ttf') format('truetype'),
-  url('/fonts/NanumBarunpenR.otf') format('opentype'),
-  url('/fonts/NanumBarunpenR.eot') format('embedded-opentype');
-}
-
-@font-face {
-  font-family: 'NanumBarunpen';
-  font-style: normal;
-  font-weight: bold;
-  src: local('/fonts/NanumBarunpen'),
-  url('/fonts/NanumBarunpenB.woff2') format('woff2'),
-  url('/fonts/NanumBarunpenB.woff') format('woff'),
-  url('/fonts/NanumBarunpenB.ttf') format('truetype'),
-  url('/fonts/NanumBarunpenB.otf') format('opentype'),
-  url('/fonts/NanumBarunpenB.eot') format('embedded-opentype');
-}
-
-
+@font-face { font-family: 'NanumBarunpen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 html{height:100%;}
 body{font-family:'NanumBarunpen',sans-serif;margin:0;scroll-behavior:smooth;overflow-x:hidden;word-break:break-word;height:100%;}
