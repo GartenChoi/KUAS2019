@@ -13,7 +13,7 @@ const Major = mongoose.model('major', majorSchema);
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
-  const majors = await Major.find({'wordclouds': {'$exists': true}},{'name':1,'univname':1});
+  const majors = await Major.find({'wordclouds.0': {'$exists': true}},{'name':1,'univname':1});
 
   let ftpClient=new ftp();
   ftpClient.connect({
