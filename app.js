@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
+var temporaryRouter = require('./routes/temporary');
 
 // const mongoose=require('mongoose'),db=mongoose.connection;
 //
@@ -45,6 +46,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
+app.use('/temporary', temporaryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
