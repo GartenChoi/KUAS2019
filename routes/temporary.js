@@ -12,19 +12,19 @@ var majorSchema = mongoose.Schema({
 const Major = mongoose.model('major', majorSchema);
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
-  const majors = await Major.find({'wordclouds.0': {'$exists': true}},{'name':1,'univname':1});
-
-  let ftpClient=new ftp();
-  ftpClient.connect({
-    host: 'jedo0328.cafe24.com',
-    user: 'jedo0328',
-    password:'jeidoubleu0328'
-  });
-  ftpClient.on('ready',function(){
-    ftpClient.list('/MajorMap/wordclouds',function(err,list){
-      return res.render('temporary/wordclouds', {ftplength:list.length,majors:majors});
-    })
-  });
-});
+// router.get('/wordclouds', async function(req, res, next) {
+//   const majors = await Major.find({'wordclouds.0': {'$exists': true}},{'name':1,'univname':1});
+//
+//   let ftpClient=new ftp();
+//   ftpClient.connect({
+//     host: 'jedo0328.cafe24.com',
+//     user: 'jedo0328',
+//     password:'jeidoubleu0328'
+//   });
+//   ftpClient.on('ready',function(){
+//     ftpClient.list('/MajorMap/wordclouds',function(err,list){
+//       return res.render('temporary/wordclouds', {ftplength:list.length,majors:majors});
+//     })
+//   });
+// });
 module.exports = router;
