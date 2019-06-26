@@ -20,8 +20,9 @@ router.get('/wordclouds', async function(req, res, next) {
   });
   ftpClient.on('ready',function(){
     ftpClient.list('/MajorMap/chapter2.2/wordcloud',async function(err,list){
+        const majorlength=await Major.countDocuments({'wordclouds.0': {'$exists': true}});
         const majors = await Major.find({'wordclouds.0': {'$exists': true}},{'name':1,'univname':1}).limit(list.length);
-        return res.render('temporary/wordclouds', {ftplength:list.length,majors:majors});
+        return res.render('temporary/wordclouds', {ftplength:list.length,majors:majors,majorlength:majorlength});
     })
   });
 });
