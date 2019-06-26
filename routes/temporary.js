@@ -7,7 +7,8 @@ var db = mongoose.connection;
 mongoose.connect('mongodb://root:!majorofwkqtybj0816@52.231.158.65/admin', {useNewUrlParser: true, promiseLibrary: global.Promise});
 var majorSchema = mongoose.Schema({
   name: {type: String, require: true},
-  univname: {type: String}
+  univname: {type: String},
+  wordclouds:{type:Array}
 });
 const Major = mongoose.model('major', majorSchema);
 router.get('/wordclouds', async function(req, res, next) {
