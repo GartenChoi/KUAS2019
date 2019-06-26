@@ -17,10 +17,11 @@ router.get('/wordclouds', async function(req, res, next) {
     user: 'jedo0328',
     password:'jeidoubleu0328'
   });
+  let totalMajor=await Major.countDocuments({'wordclouds.0': {'$exists': true}});
   ftpClient.on('ready',function(){
     ftpClient.list('/MajorMap/chapter2.2/wordcloud',async function(err,list){
         const majors = await Major.find({'wordclouds.0': {'$exists': true}},{'name':1,'univname':1}).limit(list.length);
-        return res.render('temporary/wordclouds', {ftplength:list.length,majors:majors});
+        return res.render('temporary/wordclouds', {ftplength:list.length,totalMajor:totalMajor,majors:majors});
     })
   });
 });
