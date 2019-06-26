@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>메이저맵 출판 준비중...</title>
+    <style>
+        .page{width:2481px;height:3508px;margin:auto;position:relative}
+        .page>*{position:absolute}
+        @media print{.page{page-break-after: always;}}
+    </style>
+</head>
+<body>
+<div class="page">
+    <%majors.forEach(function(major){%>
+    <div class="major">
+        <h3><%-major.univname%> <%-major.name%></h3>
+        <img src="https://jedo0328.cafe24.com/MajorMap/wordclouds/<%-major._id%>.png"/>
+    </div>
+    <%})%>
+</div>
+</body>
+</html>

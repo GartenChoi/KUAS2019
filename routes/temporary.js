@@ -10,21 +10,19 @@ var majorSchema = mongoose.Schema({
   univname: {type: String}
 });
 const Major = mongoose.model('major', majorSchema);
+router.get('/wordclouds', async function(req, res, next) {
+  const majors = await Major.find({'wordclouds.0': {'$exists': true}},{'name':1,'univname':1});
 
-/* GET home page. */
-// router.get('/wordclouds', async function(req, res, next) {
-//   const majors = await Major.find({'wordclouds.0': {'$exists': true}},{'name':1,'univname':1});
-//
-//   let ftpClient=new ftp();
-//   ftpClient.connect({
-//     host: 'jedo0328.cafe24.com',
-//     user: 'jedo0328',
-//     password:'jeidoubleu0328'
-//   });
-//   ftpClient.on('ready',function(){
-//     ftpClient.list('/MajorMap/wordclouds',function(err,list){
-//       return res.render('temporary/wordclouds', {ftplength:list.length,majors:majors});
-//     })
-//   });
-// });
+  let ftpClient=new ftp();
+  ftpClient.connect({
+    host: 'jedo0328.cafe24.com',
+    user: 'jedo0328',
+    password:'jeidoubleu0328'
+  });
+  ftpClient.on('ready',function(){
+    ftpClient.list('/MajorMap/chapter2.2/wordclouds',function(err,list){
+      return res.render('temporary/wordclouds', {ftplength:list.length,majors:majors});
+    })
+  });
+});
 module.exports = router;
