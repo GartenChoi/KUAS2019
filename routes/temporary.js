@@ -20,7 +20,7 @@ router.get('/wordclouds', async function(req, res, next) {
     password:'jeidoubleu0328'
   });
   ftpClient.on('ready',function(){
-    ftpClient.list('/MajorMap/chapter2.2/wordclouds',function(err,list){
+    ftpClient.list('/MajorMap/chapter2.2/wordcloud',function(err,list){
       return res.render('temporary/wordclouds', {ftplength:list.length,majors:majors});
     })
   });
