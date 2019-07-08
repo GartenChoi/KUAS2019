@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    const headParams={
+        title:'KUAS - 고려대학교 합성생물학회',
+        url:'/',
+        description:'고려대학교 합성생물학회',
+        keywords:['KUAS','합성생물학','igem','생물','생명','생물학','고려대학교','고려대'],
+        images:['/img/logo.png'],
+        css:[],
+        schema:{
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.kuaskorea.org",
+            "name":"Major Map",
+            "logo": "https://www.kuaskorea.org/img/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email":"kuaskorea@gmail.com",
+                "contactType": "Customer service"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.kuaskorea.org/map/searchMap?search={searchTerms}",
+                "query-input": "required name=searchTerms"
+            }
+        }
+    }
+    let footParams={
+        js:[]
+    }%>
+    <%-include('../parts/head',headParams);%>
+    <style>canvas { background: #eee; display: block; margin: 0 auto; }</style>
+</head>
+<body>
+<%include ../parts/header.ejs%>
+<canvas id="kuas2019__game--canvas" width="480" height="320"></canvas>
+<%include ../parts/footer.ejs%>
+<%-include('../parts/foot.ejs',footParams);%>
+<script>
+    const keyCode={37:'left',38:'up',39:'right',40:'down'}
+    let keyPressed={'left':false,'up':false,'right':false,'down':false}
+    const stageCode={0:'way',1:'wall',2:'promotor1'}
+    class user{
+        constructor(name,x,y){
+            this.name=name
+            this.x=x
+            this.y=y
+            this.score=0
+            this.dx = 2;this.dy = -2;
+        }
+    }
+    class stageCell {
+        constructor(x1,y1,width,height,type) {
+            this.x1=x1;this.x2=x1+width;
+            this.y1=y1;this.y2=y1+height;
+            if (type===2)
+                this.type=new Promotor();
+        }
+    }
+    class Promotor{}
+    class Stage{
+        constructor(stage){
+            this.canvas = document.getElementById("kuas2019__game--canvas");
+            this.ctx = canvas.getContext("2d");
+            this.width=canvas.width;
+            this.height=canvas.height;
+            this.stage=[];
+            입력 stage에 따라 this.stage에 stageCell 추가.
+        }
+        
+    }
+    let stage1=new Stage([
+        [0,1,1,1,1,1],
+        [0,0,0,0,0,1],
+        [0,0,0,0,0,1],
+        [0,1,1,1,1,1],
+    ])
+    let person = new PersonClass("Nicholas");
+    person.sayName();
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+    document.addEventListener("mousemove", mouseMoveHandler, false);
+    function keyDownHandler(e) {keyPressed[keyCode[e.keyCode]]=true;}
+    function keyUpHandler(e) {keyPressed[keyCode[e.keyCode]]=false;}
+    function mouseMoveHandler(e) {
+        var relativeX = e.clientX - canvas.offsetLeft;
+        if(relativeX > 0 && relativeX < canvas.width) {paddleX = relativeX - paddleWidth/2;}
+    }
+    function collisionDetection() {
+        for(let i=0;i<maze.length-1;i++) {
+            for(let j=0;i<maze[i].length-1;j++) {
+                if(maze[i][j]===1 && x>(canvas.width/maze[i].length)*j && x<(canvas.width/maze[i].length)*(j+1) && y>(canvas.height/maze.length)*i && y>(canvas.height))
+            }
+        }
+        for(const mazeRow in maze){
+            for(const mazeCell in mazeRow){
+                if(mazeCell===1 && x > mazeCell.x && x < mazeCell.x+wallSize && y > mazeCell.y && y < mazeCell.y+wallSize) {
+                        dy = -dy;
+                        b.status = 0;
+                        score++;
+                        if(score == brickRowCount*brickColumnCount) {
+                            alert("YOU WIN, CONGRATS!");
+                            document.location.reload();
+                        }
+                    }
+                }
+            }
+        }
+        for(var c=0; c<brickColumnCount; c++) {
+            for(var r=0; r<brickRowCount; r++) {
+                var b = bricks[c][r];
+                if(b.status == 1) {
+                    if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                        dy = -dy;
+                        b.status = 0;
+                        score++;
+                        if(score == brickRowCount*brickColumnCount) {
+                            alert("YOU WIN, CONGRATS!");
+                            document.location.reload();
+                        }
+                    }
+                }
+            }
+        }
+    }
+    function drawBall() {
+        ctx.beginPath();
+        ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+    }
+    function drawPaddle() {
+        ctx.beginPath();
+        ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+    }
+    function drawBricks() {
+        for(var c=0; c<brickColumnCount; c++) {
+            for(var r=0; r<brickRowCount; r++) {
+                if(bricks[c][r].status == 1) {
+                    var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeft;
+                    var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+                    bricks[c][r].x = brickX;
+                    bricks[c][r].y = brickY;
+                    ctx.beginPath();
+                    ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                    ctx.fillStyle = "#0095DD";
+                    ctx.fill();
+                    ctx.closePath();
+                }
+            }
+        }
+    }
+    function drawScore() {
+        ctx.font = "16px Arial";
+        ctx.fillStyle = "#0095DD";
+        ctx.fillText("Score: "+score, 8, 20);
+    }
+    function drawLives() {
+        ctx.font = "16px Arial";
+        ctx.fillStyle = "#0095DD";
+        ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+    }
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBricks();
+        drawBall();
+        drawPaddle();
+        drawScore();
+        drawLives();
+        collisionDetection();
+        if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+            dx = -dx;
+        }
+        if(y + dy < ballRadius) {
+            dy = -dy;
+        }
+        else if(y + dy > canvas.height-ballRadius) {
+            if(x > paddleX && x < paddleX + paddleWidth) {
+                dy = -dy;
+            }
+            else {
+                lives--;
+                if(!lives) {
+                    alert("GAME OVER");
+                    document.location.reload();
+                }
+                else {
+                    x = canvas.width/2;
+                    y = canvas.height-30;
+                    dx = 3;
+                    dy = -3;
+                    paddleX = (canvas.width-paddleWidth)/2;
+                }
+            }
+        }
+        if(rightPressed && paddleX < canvas.width-paddleWidth) {
+            paddleX += 7;
+        }
+        else if(leftPressed && paddleX > 0) {
+            paddleX -= 7;
+        }
+        x += dx;
+        y += dy;
+        requestAnimationFrame(draw);
+    }
+    draw();
+</script>
+</body>
+</html>
