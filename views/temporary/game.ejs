@@ -52,11 +52,10 @@
         }
     }
     class stageCell {
-        constructor(x1,y1,width,height,type) {
-            this.x1=x1;this.x2=x1+width;
-            this.y1=y1;this.y2=y1+height;
-            if (type===2)
-                this.type=new Promotor();
+        constructor(type) {
+            switch(type) {
+                case 2:this.type=new Promotor()
+            }
         }
     }
     class Promotor{}
@@ -66,10 +65,19 @@
             this.ctx = canvas.getContext("2d");
             this.width=canvas.width;
             this.height=canvas.height;
-            this.stage=[];
-            입력 stage에 따라 this.stage에 stageCell 추가.
+            this.stage=stage;
+            this.dx=this.stage.length
         }
-        
+        checkStageCell(x,y){
+            for(let i=0;i<maze.length-1;i++) {
+                for(let j=0;i<maze[i].length-1;j++) {
+                    if(x>(this.width/this.stage.length)*j && x<(canvas.width/maze[i].length)*(j+1) && y>(canvas.height/maze.length)*i && y>(canvas.height)){
+
+                    }
+                }
+            }
+            return [i][j]
+        }
     }
     let stage1=new Stage([
         [0,1,1,1,1,1],
