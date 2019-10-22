@@ -1,0 +1,48 @@
+<!--공지사항-->
+<div class="header--banner--notice--container">
+    <div class="contents-area">
+        <span>'나에게 맞는 전공 찾기' 메이저맵 전공추천 OPEN!</span>
+        <i class="material-icons" onclick="$('body').removeClass('header--banner--notice--container__opened');">close</i>
+    </div>
+</div>
+<!--헤더-->
+<header class="header--container">
+    <div class="contents-area">
+        <a href="./index.html">MajorMap</a>
+        <div class="header--search--box">
+            <input type="text" placeholder="검색" value=""></input>
+            <a href="./search.total.html"><i class="material-icons">search</i></a>
+        </div>
+        <div class="header--menu--box__mobile">
+            <div class="header--menu">
+                <button class="header--menu--button" onclick="$(this).next().slideToggle()"><i class="material-icons">menu</i></button>
+                <div class="header--menu--list">
+                    <a href="./user.profile.html">닉네임</a>
+                    <button>개인정보수정</button>
+                    <button class="logout--button">로그아웃</button>
+                    <a>메이저맵 가이드</a>
+                </div>
+            </div>
+        </div>
+        <div class="header--menu--box__pc">
+            <div class="header--menu">
+                <button class="header--menu--button" onclick="$(this).next().slideToggle()">닉네임</button>
+                <div class="header--menu--list">
+                    <button>닉네임</button>
+                    <button>개인정보수정</button>
+                    <button>학사일정관리</button>
+                    <button>배너관리</button>
+                    <button class="logout--button">로그아웃</button>
+                </div>
+            </div>
+            <a>메이저맵 가이드</a>
+        </div>
+        <!--<div class="header&#45;&#45;menu&#45;&#45;box__pc">-->
+        <!--<a href="./login.html">닉네임</a>-->
+        <!--<div class="header&#45;&#45;menu">-->
+        <!--<a href="./login.html">로그인</a>-->
+        <!--</div>-->
+        <!--<a>메이저맵 가이드</a>-->
+        <!--</div>-->
+    </div>
+</header>

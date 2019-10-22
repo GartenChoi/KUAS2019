@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!--@import(./components/head.ejs)-->
+</head>
+<body id="app" class="header--banner--notice--container__opened">
+<!--@import(./components/header.html)-->
+<div class="header2--container"><div class="contents-area">검색</div></div>
+<div class="search--total--container">
+    <div class="contents-area">
+        <div class="search--total--box">
+            <div style="margin-bottom:16px;font-size:24px;"><b class="font-color-0f75bc">'과학'</b>에 대한 검색결과 <b>34</b>개</div>
+            <div class="d-flex-center font-color-666666">
+                <span style="margin-right:16px;border-radius:4px;background-color:#e5e7ea;">연관검색어</span>
+                <a style="margin-right:16px;color:#666;" href="search.total.html">과학기술</a>
+                <a style="margin-right:16px;color:#666;" href="search.total.html">생명과학</a>
+                <a style="margin-right:16px;color:#666;" href="search.total.html">우주</a>
+                <a style="margin-right:16px;color:#666;" href="search.total.html">지구과학</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="search--tab--container">
+    <div class="contents-area-flex">
+        <div onclick="$('.search--result--major,.search--result--univ,.search--result--category').slideDown()">통합검색(37)</div>
+        <div onclick="$('.search--result--major').slideDown();$('.search--result--univ,.search--result--category').slideUp()">학과(6)</div>
+        <div onclick="$('.search--result--univ').slideDown();$('.search--result--major,.search--result--category').slideUp()">대학(21)</div>
+        <div onclick="$('.search--result--category').slideDown();$('.search--result--major,.search--result--univ').slideUp()">전공분야(7)</div>
+    </div>
+</div>
+<div class="search--container">
+    <div class="search--result--univ">
+        <div class="contents-area">
+            <div class="contents-title">대학</div>
+            <div class="search--univ-result--item">
+                <img src="https://image.bugsm.co.kr/album/images/500/202744/20274473.jpg" alt="서울과학기술대학교(38개 학과)"></img>
+                <div>
+                    <div class="search--univ-result--item--title">서울과학기술대학교(38개 학과)</div>
+                    <div class="search--univ-result--item--description">
+                        <div>
+                            <div><span>주소</span> 서울 측별시 노원구 공릉로 232</div>
+                            <div><span>대학구분</span> 사립</div>
+                        </div>
+                        <div>
+                            <div><span>평균 등록금</span> 542만원</div>
+                            <div><span>평균 장학금</span> 300만원</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search--univ-result--item">
+                <img src="https://image.bugsm.co.kr/album/images/500/202744/20274473.jpg" alt="서울과학기술대학교(38개 학과)"></img>
+                <div>
+                    <div class="search--univ-result--item--title">서울과학기술대학교(38개 학과)</div>
+                    <div class="search--univ-result--item--description">
+                        <div>
+                            <div><span>주소</span> 서울 측별시 노원구 공릉로 232</div>
+                            <div><span>대학구분</span> 사립</div>
+                        </div>
+                        <div>
+                            <div><span>평균 등록금</span> 542만원</div>
+                            <div><span>평균 장학금</span> 300만원</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search--univ-result--item">
+                <img src="https://image.bugsm.co.kr/album/images/500/202744/20274473.jpg" alt="서울과학기술대학교(38개 학과)"></img>
+                <div>
+                    <div class="search--univ-result--item--title">서울과학기술대학교(38개 학과)</div>
+                    <div class="search--univ-result--item--description">
+                        <div>
+                            <div><span>주소</span> 서울 측별시 노원구 공릉로 232</div>
+                            <div><span>대학구분</span> 사립</div>
+                        </div>
+                        <div>
+                            <div><span>평균 등록금</span> 542만원</div>
+                            <div><span>평균 장학금</span> 300만원</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-text">
+                <i class="material-icons">keyboard_arrow_down</i>
+            </button>
+        </div>
+    </div>
+    <div class="search--result--major">
+        <div class="contents-area">
+            <div class="contents-title">학과(vue accordion 받으면 다시 만들예정.)</div>
+            <div class="search--major-result--item">
+                <div class="search--major-result--item--title" onclick="$(this).next().slideToggle();">
+                    <span>간호학과</span>
+                    <span>자연과학계열 > 간호 > <b>간호학</b></span>
+                </div>
+                <table>
+    <thead><tr>
+        <th>
+            <span>학과</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>모집인원</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>수시 경쟁률</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>정시 경쟁률</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>등록금</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>장학금</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>재학기간</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+    </tr></thead>
+    <tbody>
+    <tr>
+        <td class="text-left">간호학과<span>보건대학</span></td>
+        <td>197</td>
+        <td>15.2</td>
+        <td>3.9</td>
+        <td>300만원</td>
+        <td>300만원</td>
+        <td>6년 6개월</td>
+    </tr>
+    <tr>
+        <td class="text-left">간호학과<span>보건대학</span></td>
+        <td>197</td>
+        <td>15.2</td>
+        <td>3.9</td>
+        <td>300만원</td>
+        <td>300만원</td>
+        <td>6년 6개월</td>
+    </tr>
+    <tr>
+        <td class="text-left">간호학과<span>보건대학</span></td>
+        <td>197</td>
+        <td>15.2</td>
+        <td>3.9</td>
+        <td>300만원</td>
+        <td>300만원</td>
+        <td>6년 6개월</td>
+    </tr>
+    </tbody>
+</table>
+            </div>
+            <div class="search--major-result--item">
+                <div class="search--major-result--item--title" onclick="$(this).next().slideToggle();">
+                    <span>간호학과</span>
+                    <span>자연과학계열 > 간호 > <b>간호학</b></span>
+                </div>
+                <table>
+    <thead><tr>
+        <th>
+            <span>학과</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>모집인원</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>수시 경쟁률</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>정시 경쟁률</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>등록금</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>장학금</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+        <th>
+            <span>재학기간</span>
+            <button class="activated">▲</button>
+            <button>▼</button>
+        </th>
+    </tr></thead>
+    <tbody>
+    <tr>
+        <td class="text-left">간호학과<span>보건대학</span></td>
+        <td>197</td>
+        <td>15.2</td>
+        <td>3.9</td>
+        <td>300만원</td>
+        <td>300만원</td>
+        <td>6년 6개월</td>
+    </tr>
+    <tr>
+        <td class="text-left">간호학과<span>보건대학</span></td>
+        <td>197</td>
+        <td>15.2</td>
+        <td>3.9</td>
+        <td>300만원</td>
+        <td>300만원</td>
+        <td>6년 6개월</td>
+    </tr>
+    <tr>
+        <td class="text-left">간호학과<span>보건대학</span></td>
+        <td>197</td>
+        <td>15.2</td>
+        <td>3.9</td>
+        <td>300만원</td>
+        <td>300만원</td>
+        <td>6년 6개월</td>
+    </tr>
+    </tbody>
+</table>
+            </div>
+            <button class="btn-text">
+                <i class="material-icons">keyboard_arrow_down</i>
+            </button>
+        </div>
+    </div>
+    <div class="search--result--category">
+        <div class="contents-area">
+            <div class="contents-title">전공분야</div>
+            <div class="search--category-result--item">
+    <div class="search--category-result--item--title">
+        <a href="./detail.category.html">간호학</a>
+        <span>자연과학 / 간호</span>
+    </div>
+    <div class="search--category-result--item--description">
+        간호학은 사람들의 건강을 증진시키고 질병에서 오는 고통을 줄여 더 행복한 삶을 살 수 있도록 돕는 전문
+        간호 이론과 기술을 배우는 학문입니다. 간호학은 간호 대상의 특성과 변화에 따른 간호 방법을 연구하며,
+        성인간호학, 아동간호학, 모성간호학, 노인간호학, 정신건강간호학, 지역사회간호학 등으로 구분할 수
+        있습니다. 대학에 따라 4년제, 혹은 3년제 교육과정으로 개설되어 있으며 국가시험을 거쳐 간호사 면허
+        취득 후 간호사로 종사할 수 있습니다. 병원에서의 임상간호사 외에 보건간호사, 산업간호사 등 다양한
+        분야에서 활동합니다.
+    </div>
+    <div class="search--category-result--item--keywords">
+        간호학과, 간호학과(4년제), 간호학부
+    </div>
+</div><div class="search--category-result--item">
+    <div class="search--category-result--item--title">
+        <a href="./detail.category.html">간호학</a>
+        <span>자연과학 / 간호</span>
+    </div>
+    <div class="search--category-result--item--description">
+        간호학은 사람들의 건강을 증진시키고 질병에서 오는 고통을 줄여 더 행복한 삶을 살 수 있도록 돕는 전문
+        간호 이론과 기술을 배우는 학문입니다. 간호학은 간호 대상의 특성과 변화에 따른 간호 방법을 연구하며,
+        성인간호학, 아동간호학, 모성간호학, 노인간호학, 정신건강간호학, 지역사회간호학 등으로 구분할 수
+        있습니다. 대학에 따라 4년제, 혹은 3년제 교육과정으로 개설되어 있으며 국가시험을 거쳐 간호사 면허
+        취득 후 간호사로 종사할 수 있습니다. 병원에서의 임상간호사 외에 보건간호사, 산업간호사 등 다양한
+        분야에서 활동합니다.
+    </div>
+    <div class="search--category-result--item--keywords">
+        간호학과, 간호학과(4년제), 간호학부
+    </div>
+</div><div class="search--category-result--item">
+    <div class="search--category-result--item--title">
+        <a href="./detail.category.html">간호학</a>
+        <span>자연과학 / 간호</span>
+    </div>
+    <div class="search--category-result--item--description">
+        간호학은 사람들의 건강을 증진시키고 질병에서 오는 고통을 줄여 더 행복한 삶을 살 수 있도록 돕는 전문
+        간호 이론과 기술을 배우는 학문입니다. 간호학은 간호 대상의 특성과 변화에 따른 간호 방법을 연구하며,
+        성인간호학, 아동간호학, 모성간호학, 노인간호학, 정신건강간호학, 지역사회간호학 등으로 구분할 수
+        있습니다. 대학에 따라 4년제, 혹은 3년제 교육과정으로 개설되어 있으며 국가시험을 거쳐 간호사 면허
+        취득 후 간호사로 종사할 수 있습니다. 병원에서의 임상간호사 외에 보건간호사, 산업간호사 등 다양한
+        분야에서 활동합니다.
+    </div>
+    <div class="search--category-result--item--keywords">
+        간호학과, 간호학과(4년제), 간호학부
+    </div>
+</div><div class="search--category-result--item">
+    <div class="search--category-result--item--title">
+        <a href="./detail.category.html">간호학</a>
+        <span>자연과학 / 간호</span>
+    </div>
+    <div class="search--category-result--item--description">
+        간호학은 사람들의 건강을 증진시키고 질병에서 오는 고통을 줄여 더 행복한 삶을 살 수 있도록 돕는 전문
+        간호 이론과 기술을 배우는 학문입니다. 간호학은 간호 대상의 특성과 변화에 따른 간호 방법을 연구하며,
+        성인간호학, 아동간호학, 모성간호학, 노인간호학, 정신건강간호학, 지역사회간호학 등으로 구분할 수
+        있습니다. 대학에 따라 4년제, 혹은 3년제 교육과정으로 개설되어 있으며 국가시험을 거쳐 간호사 면허
+        취득 후 간호사로 종사할 수 있습니다. 병원에서의 임상간호사 외에 보건간호사, 산업간호사 등 다양한
+        분야에서 활동합니다.
+    </div>
+    <div class="search--category-result--item--keywords">
+        간호학과, 간호학과(4년제), 간호학부
+    </div>
+</div><div class="search--category-result--item">
+    <div class="search--category-result--item--title">
+        <a href="./detail.category.html">간호학</a>
+        <span>자연과학 / 간호</span>
+    </div>
+    <div class="search--category-result--item--description">
+        간호학은 사람들의 건강을 증진시키고 질병에서 오는 고통을 줄여 더 행복한 삶을 살 수 있도록 돕는 전문
+        간호 이론과 기술을 배우는 학문입니다. 간호학은 간호 대상의 특성과 변화에 따른 간호 방법을 연구하며,
+        성인간호학, 아동간호학, 모성간호학, 노인간호학, 정신건강간호학, 지역사회간호학 등으로 구분할 수
+        있습니다. 대학에 따라 4년제, 혹은 3년제 교육과정으로 개설되어 있으며 국가시험을 거쳐 간호사 면허
+        취득 후 간호사로 종사할 수 있습니다. 병원에서의 임상간호사 외에 보건간호사, 산업간호사 등 다양한
+        분야에서 활동합니다.
+    </div>
+    <div class="search--category-result--item--keywords">
+        간호학과, 간호학과(4년제), 간호학부
+    </div>
+</div><div class="search--category-result--item">
+    <div class="search--category-result--item--title">
+        <a href="./detail.category.html">간호학</a>
+        <span>자연과학 / 간호</span>
+    </div>
+    <div class="search--category-result--item--description">
+        간호학은 사람들의 건강을 증진시키고 질병에서 오는 고통을 줄여 더 행복한 삶을 살 수 있도록 돕는 전문
+        간호 이론과 기술을 배우는 학문입니다. 간호학은 간호 대상의 특성과 변화에 따른 간호 방법을 연구하며,
+        성인간호학, 아동간호학, 모성간호학, 노인간호학, 정신건강간호학, 지역사회간호학 등으로 구분할 수
+        있습니다. 대학에 따라 4년제, 혹은 3년제 교육과정으로 개설되어 있으며 국가시험을 거쳐 간호사 면허
+        취득 후 간호사로 종사할 수 있습니다. 병원에서의 임상간호사 외에 보건간호사, 산업간호사 등 다양한
+        분야에서 활동합니다.
+    </div>
+    <div class="search--category-result--item--keywords">
+        간호학과, 간호학과(4년제), 간호학부
+    </div>
+</div><div class="search--category-result--item">
+    <div class="search--category-result--item--title">
+        <a href="./detail.category.html">간호학</a>
+        <span>자연과학 / 간호</span>
+    </div>
+    <div class="search--category-result--item--description">
+        간호학은 사람들의 건강을 증진시키고 질병에서 오는 고통을 줄여 더 행복한 삶을 살 수 있도록 돕는 전문
+        간호 이론과 기술을 배우는 학문입니다. 간호학은 간호 대상의 특성과 변화에 따른 간호 방법을 연구하며,
+        성인간호학, 아동간호학, 모성간호학, 노인간호학, 정신건강간호학, 지역사회간호학 등으로 구분할 수
+        있습니다. 대학에 따라 4년제, 혹은 3년제 교육과정으로 개설되어 있으며 국가시험을 거쳐 간호사 면허
+        취득 후 간호사로 종사할 수 있습니다. 병원에서의 임상간호사 외에 보건간호사, 산업간호사 등 다양한
+        분야에서 활동합니다.
+    </div>
+    <div class="search--category-result--item--keywords">
+        간호학과, 간호학과(4년제), 간호학부
+    </div>
+</div><div class="search--category-result--item">
+    <div class="search--category-result--item--title">
+        <a href="./detail.category.html">간호학</a>
+        <span>자연과학 / 간호</span>
+    </div>
+    <div class="search--category-result--item--description">
+        간호학은 사람들의 건강을 증진시키고 질병에서 오는 고통을 줄여 더 행복한 삶을 살 수 있도록 돕는 전문
+        간호 이론과 기술을 배우는 학문입니다. 간호학은 간호 대상의 특성과 변화에 따른 간호 방법을 연구하며,
+        성인간호학, 아동간호학, 모성간호학, 노인간호학, 정신건강간호학, 지역사회간호학 등으로 구분할 수
+        있습니다. 대학에 따라 4년제, 혹은 3년제 교육과정으로 개설되어 있으며 국가시험을 거쳐 간호사 면허
+        취득 후 간호사로 종사할 수 있습니다. 병원에서의 임상간호사 외에 보건간호사, 산업간호사 등 다양한
+        분야에서 활동합니다.
+    </div>
+    <div class="search--category-result--item--keywords">
+        간호학과, 간호학과(4년제), 간호학부
+    </div>
+</div>
+            <button class="btn-text">
+                <i class="material-icons">keyboard_arrow_down</i>
+            </button>
+        </div>
+    </div>
+</div>
+<!--@import(./components/footer.html)-->
+<!--@import(./components/foot.html)-->
+</body>
+</html>

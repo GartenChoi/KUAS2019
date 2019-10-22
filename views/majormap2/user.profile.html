@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--@import(./components/head.ejs)-->
+</head>
+<body id="app" class="header--banner--notice--container__opened">
+<!--@import(./components/header.html)-->
+<div class="header2--container"><div class="contents-area">개인정보 수정</div></div>
+<div class="join--container">
+    <div class="contents-area">
+        <p>이메일</p>
+        <label class="form-label-text">
+            <input type="text" placeholder="이메일주소" value="binitiger@gmail.com" readonly></input>
+        </label>
+        <p>이름</p>
+        <label class="form-label-text">
+            <input type="text" placeholder="한글, 영어 20자 이내"></input>
+            <output>이름형식 틀림</output>
+        </label>
+        <p>비밀번호</p>
+        <a href="./user.change_password.html" class="btn-a1a1a1">변경</a>
+        <p>휴대폰번호(선택)</p>
+        <label class="form-label-text">
+            <input type="text" placeholder="-없이 입력(선택)"></input>
+            <output>휴대폰 형식 틀림</output>
+        </label>
+        <p>이용자 유형</p>
+        <div class="d-flex-center">
+            <label class="form-label-check"><input type="radio" name="user_type" value="학생" onchange="$(this).is(':checked')?$('.student--checked').slideDown():$('.student--checked').slideUp()"/><i class="material-icons"></i> 학생</label>
+            <label class="form-label-check"><input type="radio" name="user_type" value="일반" onchange="$(this).is(':checked')?$('.student--checked').slideUp():$('.student--checked').slideDown()"/><i class="material-icons"></i> 일반</label>
+        </div>
+        <p class="student--checked">학교</p>
+        <label class="form-label-text student--checked">
+            <input type="text" placeholder="검색" disabled onclick="alert('학교검색창 만드는 중')"></input>
+        </label>
+        <p class="student--checked">학년</p>
+        <label class="form-label-text student--checked">
+            <input type="number" placeholder="숫자"></input>
+        </label>
+        <a href="./" class="btn-gradient" style="margin-top:40px;">회원정보 수정</a>
+        <a class="font-color-666666" href="./user.delete.html" style="display:block;width:100%;text-align:center;">회원탈퇴</a>
+    </div>
+</div>
+<!--@import(./components/footer.html)-->
+<!--@import(./components/foot.html)-->
+</body>
+</html>

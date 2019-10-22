@@ -1,0 +1,84 @@
+<!--SEO, 스타일 등등 공통적으로 쓰이는 건 여기에 있음.-->
+<meta charset="utf-8">
+<meta name="msapplication-tap-highlight" content="no" />
+<!--구글애널리틱스-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125256449-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-125256449-1');
+</script>
+<meta name="referrer" content="always">
+<!--IE 대신 엣지를 권장한다.-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1"/>
+<!--확대/축소 방지. 물론 유저가 강제 확대/축소사용 옵션 켜면 소용없음-->
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0">
+<!--og(open graph) : 다른 곳에 url 붙여넣기 했을 때 나오는 이름, 설명, 사진 등등-->
+<meta property="og:site_name" content="메이저맵" />
+<meta property="og:type" content="website"/>
+
+<!--크롬/파이어폭스/사파리 주소창에서 탭으로 검색하는 기능-->
+<link rel="search" type="application/opensearchdescription+xml" href="./openSearch.xml" title="MajorMap">
+<!--바로가기 아이콘-->
+<link rel="shortcut icon" type="image/x-icon" href="./assets/img/majorMap/favicon256.png"/>
+<link rel="icon" type="image/x-icon" href="./assets/img/majorMap/favicon256.png"/>
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/majorMap/favicon76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./assets/img/majorMap/favicon120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./assets/img/majorMap/favicon152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="./assets/img/majorMap/favicon167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/majorMap/favicon180.png">
+<link rel="apple-touch-icon" href="./assets/img/majorMap/favicon256.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-startup-image" href="./assets/img/majorMap/logo-blue-icon.png"/>
+<!--아이폰 상태바 색-->
+<meta name="apple-mobile-web-app-status-bar-style" content="#3B3E4D"/>
+<!--모바일 브라우저 주소창 색-->
+<meta name="theme-color" content="#3B3E4D"/>
+
+<!--구글 Material icons. 사실 fontawesome이 더 아이콘 다양하고 깔끔하고 쓰기도 편한데...-->
+<!--@todo 나중에 'vue-material-design-icons'으로 바꾸기.-->
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+<link rel="stylesheet" href="./assets/css/common.css">
+<link rel="stylesheet" href="./assets/css/commonSnippet.css">
+<link rel="stylesheet" href="./assets/css/commonComponents.css">
+
+<!--모바일 앱 생성-->
+<link rel="manifest" href="./manifest.json"/>
+
+<meta name="author" content="Major Map" />
+<meta name="copyright" content="copyrights (c) by (주)잡쇼퍼" />
+<!--웹마스터. 구글, 네이버, 빙-->
+<meta name="google-site-verification" content="02lF27ABhrcOfpvnVj1kW-aOY7KALgRSkzgCCnMOWX0" />
+<meta name="google-site-verification" content="zSS3TCL55Sg-B3x7JEQ3bg9k6CowJtDihJlKigShbqw" />
+<meta name="google-site-verification" content="YxqAZVD4yzzji9-NNCtCGQbjep-n-Ev7XJSRAoakpeE" />
+<meta name="google-site-verification" content="_ENZwlJU1aOy_2a9b8rB2rRfgpR2fio2ZMsdA-67tpE" />
+<meta name="naver-site-verification" content="cd5e9e816f0b1ac75fab8f75e474023da050f2db"/>
+<meta name="msvalidate.01" content="64503FC5502D0FA2793C197853A92B98" />
+
+<!--구글광고. head에 안 넣으니 경고 날아옴.-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!--// @todo 여기부터 페이지마다 달라야 함.-->
+<!--오픈그래프-->
+<meta property="og:title" content="<%-locals.title%>">
+<meta property="og:url" content="<%-locals.url%>">
+<meta property="og:description" content="<%-locals.description%>">
+<%locals.images.forEach(function(item){%>
+<meta property="og:image" content="<%-fullURL(item)%>">
+<%})%>
+<!--SEO-->
+<meta name="description" lang="ko" content="<%-locals.description%>">
+<meta name="keywords" lang="ko" content="<%-locals.keywords.join(',')%>">
+<link rel="canonical" lang="ko" content="<%-locals.url%>">
+<title><%-locals.title%></title>
+<!--애플 모바일웹 앱 제목. -->
+<meta name="apple-mobile-web-app-title" content="<%-locals.title%>">
+
+<!--스키마-->
+<script type="application/ld+json">
+    <%-JSON.stringify(locals.schema)%>
+</script>
+<!--// @todo 여기까지 페이지마다 달라야 함.-->

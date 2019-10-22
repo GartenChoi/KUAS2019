@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <%
+    const headParams={
+        title:'메이저맵',
+        url:'https://majormap.net',
+        description:'고려대학교 합성생물학회',
+        keywords:['메이저맵'],
+        images:['/img/logo.png'],
+        css:['https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'],
+        schema:{
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.majormap.net",
+            "name":"Major Map",
+            "logo": "https://www.majormap.net/img/majorMap/banner-white.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+82-70-4616-1515",
+                "email":"cs@jobshopper.co.kr",
+                "contactType": "Customer service"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.majormap.net/searchMap?keyword={searchTerms}",
+                "query-input": "required name=searchTerms"
+            }
+        }
+    }
+    let footParams={
+        js:[]
+    }%>
+    <%-include('./majormap2/components/head',headParams);%>
+</head>
+<body id="app" class="header--banner--notice--container__opened">
+<!--@import(./components/header.html)-->
+<div class="index--banner--container">
+    <div class="contents-area">
+        <div class="owl-carousel">
+            <div class="item">배너</div>
+            <div class="item">배너2</div>
+            <div class="item">배너3</div>
+            <div class="item">owl-carousel2 패키지 사용</div>
+        </div>
+    </div>
+</div>
+<div class="index--search--container">
+    <div class="contents-area">
+        <a href="./search.major.html" class="index--search--box index--search--box__green">
+            <div class="index--search--icon"></div>
+            <div class="index--search--text">
+                <div class="index--search--text--subtitle">4000개 학과 정보를 한 눈에!</div>
+                <div class="index--search--text--title">학과 검색 <i class="material-icons">keyboard_arrow_right</i></div>
+            </div>
+        </a>
+        <a href="./search.univ.html" class="index--search--box index--search--box__violet">
+            <div class="index--search--icon"></div>
+            <div class="index--search--text">
+                <div class="index--search--text--subtitle">전국 110개 대학 A to Z</div>
+                <div class="index--search--text--title">대학 검색 <i class="material-icons">keyboard_arrow_right</i></div>
+            </div>
+        </a>
+        <a href="./search.category.html" class="index--search--box index--search--box__blue">
+            <div class="index--search--icon"></div>
+            <div class="index--search--text">
+                <div class="index--search--text--subtitle">관심분야를 알아볼까?</div>
+                <div class="index--search--text--title">전공분야 검색 <i class="material-icons">keyboard_arrow_right</i></div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="index--etc--container">
+    <div class="contents-area">
+        <div class="index--calendar--box">
+            <div class="contents-title">학사일정 디데이</div>
+            <div class="index--calendar--list">
+                <div class="index--calendar">
+                    <div class="index--calendar--title">
+                        <div class="background-gradient">10/15 (화)</div>
+                        <span class="font-size-18">고3 전국 연합학력평가</span>
+                    </div>
+                    <div class="index--calendar--d-day">
+                        <span class="index--calendar--d-day--D">D-</span>
+                        <div class="index--calendar--d-day--number"><span>0</span></div>
+                        <div class="index--calendar--d-day--number"><span>2</span></div>
+                        <div class="index--calendar--d-day--number"><span>8</span></div>
+                        <span class="index--calendar--d-day--text">조금만 더 달리자!! 👏👏</span>
+                    </div>
+                </div>
+                <div class="index--calendar">
+                    <div class="index--calendar--title">
+                        <div class="background-gradient">11/14 (목)</div>
+                        <span class="font-size-18">대학수학능력시험</span>
+                    </div>
+                    <div class="index--calendar--d-day">
+                        <span class="index--calendar--d-day--D">D-</span>
+                        <div class="index--calendar--d-day--number"><span>0</span></div>
+                        <div class="index--calendar--d-day--number"><span>5</span></div>
+                        <div class="index--calendar--d-day--number"><span>8</span></div>
+                        <span class="index--calendar--d-day--text">뭐든지 이룰 수 있는 시간 😎</span>
+                    </div>
+                </div>
+                <div class="index--calendar">
+                    <div class="index--calendar--title">
+                        <div class="background-gradient">11/14 (목)</div>
+                        <span class="font-size-18">대학수학능력시험</span>
+                    </div>
+                    <div class="index--calendar--d-day">
+                        <span class="index--calendar--d-day--D">D-</span>
+                        <div class="index--calendar--d-day--number"><span>0</span></div>
+                        <div class="index--calendar--d-day--number"><span>5</span></div>
+                        <div class="index--calendar--d-day--number"><span>8</span></div>
+                        <span class="index--calendar--d-day--text">뭐든지 이룰 수 있는 시간 😎</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="index--banner2">
+            <div class="contents-title">광고</div>
+        </div>
+        <div class="index--ranking--box">
+            <div>
+                <div class="contents-title">실시간 랭킹</div>
+                <div class="contents-box">
+                    <div class="ranking--button">
+                        <button class="btn-text activated">대학</button>
+                        <button class="btn-text">학과</button>
+                    </div>
+                    <div class="ranking">
+                        <a href="./detail.univ.html"><span>1</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>2</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>3</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>4</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>5</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>6</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>7</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>8</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>9</span>한양대학교</a>
+                        <a href="./detail.univ.html"><span>10</span>한양대학교</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="index--ask--container">
+    <div class="contents-area">
+        <div class="contents-title">더 나은 메이저맵, 함께 만들어요!</div>
+        <div class="index--ask--box">
+            <div class="index--ask">
+                <div class="index--ask--title">내가 찾는 대학, 학과가 없다면?<a>&gt;</a></div>
+                <a class="btn-gradient">요청하기</a>
+            </div>
+            <div class="index--ask">
+                <div class="index--ask--title">오류를 발견했어요! 이거 좀 고쳐주세요.<a>&gt;</a></div>
+                <a class="btn-gradient">신고하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--@import(./components/footer.html)-->
+<!--@import(./components/foot.html)-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.index--banner--container .contents-area').owlCarousel({
+            loop:true,
+            nav:true
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!--@import(./components/head.ejs)-->
+</head>
+<body id="app" class="header--banner--notice--container__opened">
+<!--@import(./components/header.html)-->
+<div class="header2--container"><div class="contents-area">로그인</div></div>
+<div class="login--container">
+    <div class="contents-area-flex">
+        <div class="email-login">
+            <div class="contents-title">이메일로 로그인</div>
+            <label class="form-label-text">
+                <input placeholder="이메일 주소" type="email" autocomplete="true" autocapitalize="none" autofocus></input>
+                <output>이메일 주소를 입력해주세요</output>
+            </label>
+            <label class="form-label-text">
+                <input placeholder="비밀번호" type="password" autocomplete="true" autocapitalize="none"></input>
+                <output>비밀번호 틀림</output>
+            </label>
+            <button class="btn-gradient" onclick="$('.email-login label').addClass('error')">로그인</button>
+            <div class="email-login--auto-login">
+                <label class="form-label-check">
+                    <input type="checkbox"/><i class="material-icons"></i>
+                    자동로그인
+                </label>
+                <a href="user.find_password.html" class="font-color-0f75bc">비밀번호를 잊으셨나요?</a>
+            </div>
+        </div>
+        <hr/>
+        <div class="sns-login">
+            <div class="contents-title">SNS계정으로 로그인</div>
+            <a class="login--google">구글로 시작하기</a>
+            <a class="login--facebook">페이스북으로 시작하기</a>
+            <a class="login--naver">네이버로 시작하기</a>
+            <a class="login--kakao">카카오로 시작하기</a>
+        </div>
+    </div>
+</div>
+<div class="login--join--container">
+    <div class="contents-area">
+        <div>
+            <div class="join--title--container">
+                <div>아직 메이저맵</div>
+                <div>회원이 아니신가요?</div>
+                <hr>
+            </div>
+            <div class="join--contents">
+                <div>
+                    지금 <a href="./join.html" class="font-color-0f75bc font-weight-bold">회원가입</a>하고, 메이저맵에서 제공하는 유용한<br>
+                    대학/전공 정보를 확인하세요
+                </div>
+                <a href="./join.html">메이저맵 회원가입</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--@import(./components/footer.html)-->
+<!--@import(./components/foot.html)-->
+</body>
+</html>
